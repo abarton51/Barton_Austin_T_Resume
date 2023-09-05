@@ -1,0 +1,181 @@
+\documentclass[]{resume-openfont}
+
+\pagestyle{fancy}
+\resetHeaderAndFooter
+
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Create job position command. Parameters: company, position, location, when
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+
+% Create education heading. Parameters: Name, major, year, where, when, minor(s)
+\newcommand{\educationHeading}[5]{\runsubsection{#1}\hspace*{\fill} \location{#3 | #5 | #4}\\
+\runSchoolName{#2}\vspace{1pt}\fakeNewLine}
+
+% Create project heading. Parameters: Name, link, Tech stack
+\newcommand{\projectHeading}[2]{\Project{#1}\hfill{#2}\\}
+
+\newcommand{\projectHeadingWithDate}[3]{\Project{#1}\hfill{#2}
+\descript{#3}\\}
+
+% Parameters: courses
+\newcommand{\courseWork}[9]{\textbf{\underline{Relevant Upper Coursework:}} \vspace{2pt}\newline
+\\ #1; #2; #3; #4; #5; #6; #7; #8; #9}
+\newcommand{\course}[1]{#1}
+
+% Parameters: courses
+\newcommand{\student}[1]{\textbf{Teacher Assistant (TA):} #1}
+
+% Awards heading
+\newcommand{\awardsHeading}[1]{\runsubsection{#1}}
+
+% Parameters: awards
+\newcommand{\awards}[9]{\runsubsection{#1} \hspace*{\fill} \runsubsection{#2} \\
+{#3} \hspace*{\fill} {#6} \\
+{#4} \hspace*{\fill} {#7} \\
+{#5} \hspace*{\fill} {#8} \\
+ \hspace*{\fill} {#9}}
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\def\name{Austin Barton} % Name Here
+\def\phone{(704) 438-7616}
+\def\email{barton.austin.t@gmail.com}
+\def\studentemail{abarton40@gatech.edu}
+\def\LinkedIn{austintbarton} % linkedin.com/in/______
+\def\studentprof{austintbarton} % github username
+\def\role{} % JOB TITLE
+%--------------------------------------------------------------
+\input{_header}
+%--------------------------------------------------------------
+\begin{document}
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\section{Education}
+% Put school first and degree second if your school is reputable
+\educationHeading{\large{Georgia Institute of Technology}}{B.S. in Mathematics and Computer Science (GPA: 3.77)}{(Current)}{Atlanta, GA}{Projected Graduation Date: May 2025}
+%   Coursework
+\courseWork{Deep Learning (Current)}{Database Systems (Current)}{Machine Learning (Current)}{Statistical Theory}{Mathematics of Data Science}{Information Theory}{Introduction to Artificial Intelligence (Python)}{Design and Analysis of Algorithms}{Probability Theory}\course{; Real Analysis I}\course{; Second Course in Linear Algebra}\course{; Data Structures and Algorithms}
+
+\sectionsep
+\vspace{-6pt}
+
+\section{Skills}
+\vspace{-4pt}
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\begin{skillList}
+    %\singleItem{Mathematics:}{Probability and Statistics, LaTeX}\\
+    \singleItem{Programming Languages:}{Python, Java, LaTeX, SQL }\singleItem{\hspace*{\fill} Libraries and Packages:}{Scikit-learn, PyTorch, Keras, Pandas, NumPy}\\
+    %\singleItem{Software Technology:}{Pandas, TensorFlow, Numpy, Seaborn, Matplotlib}\\
+    %\singleItem{Programming Packages, Libraries, etc.}{Pandas, TensorFlow, Keras, Numpy, Matplotlib, Seaborn} \\
+    \singleItem{Concepts:}{Machine Learning, Deep Learning, Data Science, AI, Database Systems, Data Structures, Algorithms, OOP}\\
+    \singleItem{Other:}{Passion, Analytical, Enthusiasm, Collaboration, Initiative, Communication}
+\end{skillList}
+
+\sectionsep
+\vspace{-4pt}
+
+%--------------------------------------------------------------
+%     Research Experience
+%--------------------------------------------------------------
+\section{Research Experience}
+
+\resumeHeading{\href{https://github.com/abarton51/BINNs_EQL_Covasim}{Research Experience for Undergraduates}}{Researcher}{Raleigh, NC}{May 2023 - Aug 2023}
+\begin{bullets}
+    \item Attended the NSF and NSA sponsored Research Experience for Undergraduates program at the Dept. of Math at NC State University. I researched parameter estimation using biologically-informed neural networks and equation learning to obtain a mathematical model for an agent-based epidemiological model with added adaptive behaviors. All \href{https://github.com/abarton51/BINNs_EQL_Covasim}{code} is implemented in Python and used the PyTorch deep learning platform. 
+    \item Presented a poster on my research at the NC State Undergraduate Research Symposium.
+    \item Awarded Best Poster Presentation for the Math and Statistics REU program.
+   % \item  \href{https://github.com/abarton51/BINNs_EQL_Covasim}{code} is implemented in Python using PyTorch and interacts with the \href{https://github.com/InstituteforDiseaseModeling/covasim}{Covasim} simulator for data generation.
+\end{bullets}
+
+\sectionsep
+\vspace{-4pt}
+
+%--------------------------------------------------------------
+%     Work Experience
+%--------------------------------------------------------------
+\section{Work Experience}
+
+\resumeHeading{United States Marine Corps}{Infantry Assaultman (E-5)}{Camp Lejeune, NC}{Oct 2016 - Oct 2020}
+\begin{bullets}
+    \item Led, mentored, and collaborated with a team of 12 Marines to prioritize mission accomplishment under hazardous working conditions and stressful environments. Acted as the senior representative of the Assault section for numerous training operations and two overseas deployments for a total of 15 months deployed.
+    \item Served 4 years active duty in 2d Battalion 6th Marines, Fox Co. and honorably separated as a Sergeant/E-5.
+\end{bullets}
+
+\sectionsep
+\vspace{-4pt}
+
+%--------------------------------------------------------------
+%     Projects
+%--------------------------------------------------------------
+\section{Projects}
+\projectHeadingWithDate{Bird classification with CNNs}{MATH 4210 at Georgia Tech |}{Jan. 2023 - May 2023}
+%Completed a project on a colored image multi-class classification task using convolutional neural networks (CNNs). Implemented 3 distinct CNNs in Python using TensorFlow on a dataset of over 15,000 RGB images of birds belonging to 100 separate classes. Concluded with an analysis of performance across various machine learning methods and optimization techniques. 
+Explored convolutional neural networks (CNNs) as a method of statistical learning on a multi-class image classification task. Implemented 3 distinct CNN models in Python using TensorFlow and the Keras deep learning library. The dataset consisted of approximately 88,000 bird images belonging to 515 different classes/species. % The full dataset consisted of approximately 88,000 bird images belonging to 515 distinct species. Exploration of techniques were conducted on a subset of 100 species and 16,000 images.
+%Concluded with an analysis of results and performance across various hyperparameters, optimization techniques, and other machine learning methods.
+\smallskip
+
+\projectHeadingWithDate{Simple Random Walks and Enumeration}{MATH 3235 at Georgia Tech |}{Oct. 2022 - Dec. 2022}
+As a student for Probability Theory, I created a paper surveying and explaining simple random walks under the perspective of a probabilistic and combinatorial approach. I demonstrated the Gambler's Ruin problem and showcased the method of multivariate generating functions as an enumeration technique under the symmetric case.
+\smallskip
+
+%\projectHeadingWithDate{Dyck path enumeration}{Georgia Tech School of Mathematics |}{Sep. 2022 - Dec. 2022}
+%Participated in the Directed Reading Program hosted by the School of Math at Georgia Institute of Technology. I studied enumerative combinatorics related to Dyck paths under the guidance of a postdoctoral researcher.
+%\smallskip
+
+\projectHeadingWithDate{Warrior Scholar Project}{Warrior Scholar Project at Yale University |}{August 2020}
+College education preparation program for enlisted veterans transitioning to student life hosted by Yale University.
+\sectionsep
+\vspace{-4pt}
+
+\section{Activities}
+\begin{skillList}
+    \singleItem{Georgia Tech Climbing Club}{Indoor Sport Climbing and Bouldering; We lead climb and boulder for recreation.} \\
+    \singleItem{Directed Reading Program}{Studied enumerative combinatorics for Dyck paths under the guidance of a postdoctoral researcher.}
+    %\singleItem{Georgia Tech Trading Club:}{General member; Weekly hour long meetings to discuss and explore recent news and trading strategies.} \\
+   % \singleItem{Georgia Tech Trading Club:}{Weekly meetings to discuss mathematics and solve problems similar to Putnam style} \\
+    %\singleItem{}{ math competitions.} \\
+    %\singleItem{Georgia Tech Blockchain Club:}{General Member}%; We meet weekly, attend seminars, and discuss blockchain technology from} \\
+    %\singleItem{}{perspectives of development, theory, investing, decentralized finance, and Layer-1 technologies.} 
+\end{skillList}
+
+\iffalse
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\section{Skills}
+\begin{skillList}
+    %\singleItem{Mathematics:}{Probability and Statistics, LaTeX}\\
+    \singleItem{Programming Languages:}{Python, Java, C}\\
+    \singleItem{Programming Packages, Libraries, etc.}{Pandas, TensorFlow, Keras, Numpy, Matplotlib, Seaborn} \\
+    \singleItem{Programming Concepts}{Artificial Intelligence, Data Science, Data structures, Algorithms, Object-oriented programming}\\
+    \singleItem{Other:}{Enthusiasm; Collaboration; Initiative; Communication; Analytical}
+\end{skillList}
+\fi
+\vspace{4pt}
+%this needs some editing but overall not bad
+\section{Security Clearance}
+\singleItem{Secret-level clearance (2016 - 2020), currently inactive}{}
+\iffalse
+
+\vspace{6pt}
+
+\section{Awards}
+\awards{Academic Awards}{Notable Military Awards}{Dean's List \hfill John H. and Susan S. Traendly Scholar \\ Zell Miller Scholar}{Certificate of Commendation \hfill Meritorious Promotion \\ Good Conduct Medal \hfill Arctic Service Medal}
+\fi
+\vspace{2pt}
+\section{Awards}
+\awards{Academic Awards}{Notable Military Awards}%
+{John and Susan Traendly Scholar}%
+{Zell Miller Scholar}%
+{Dean's List}%
+{Certificate of Commendation}{Meritorious Promotion}{Good Conduct Medal}%{Arctic Service Medal}
+
+\end{document}
