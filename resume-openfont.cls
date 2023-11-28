@@ -35,10 +35,10 @@
 % section
 \titlespacing{\section}{0pt}{0pt}{0pt}
 \titleformat{\section}{%
-\color{headings}% Using comments to allow us to split the command across multiple line
+\color{black}% Using comments to allow us to split the command across multiple line
 \scshape%
-\customLatoLight%\customRalewaySemiBold
-\fontsize{15pt}{20pt}%first number is size, second number is space between lines
+\customLatoBlack%\customLatoLight%\customRalewaySemiBold
+\fontsize{14pt}{22pt}%first number is size, second number is space between lines
 \selectfont%
 \raggedright%
 \uppercase%
@@ -49,7 +49,7 @@
 \titleformat{\subsection}{%
 \color{subheadings}%
 \customLatoBlack%
-\fontsize{12pt}{12pt}%
+\fontsize{12pt}{10pt}%
 \selectfont%
 \bfseries%
 \uppercase%
@@ -83,8 +83,8 @@
 % Subheadings command - create different types of heading
 \newcommand{\runsubsection}[1]{%
 \color{subheadings}%
-\customLatoBlack%
-\fontsize{12pt}{12pt}%
+%\customLatoBlack%
+\fontsize{10pt}{10pt}%
 \selectfont%
 \bfseries%
 #1%
@@ -106,6 +106,7 @@
 \scshape%
 \customRalewayMedium%
 \fontsize{11pt}{13pt}%
+\bfseries%
 \selectfont{#1}%
 \normalfont}
 
